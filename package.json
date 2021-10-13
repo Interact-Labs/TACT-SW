@@ -1,0 +1,139 @@
+{
+    "name": "tact",
+    "version": "3.0.0",
+    "description": "A kit if Infrared Detector and Electronic Pen that transform any monitor into an Interactive Surface.",
+    "main": "./build/main/mainApp.js",
+    "homepage": "https://www.interact-labs.com/",
+    "private": true,
+    "license": "SEE LICENSE IN LICENSE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Interact-Labs/TACT-SW.git"
+    },
+    "keywords": [
+        "TACT"
+    ],
+    "author": {
+        "name": "Interact Labs",
+        "email": "info@interact-labs.com",
+        "url": "https://www.interact-labs.com/"
+    },
+    "contributors": [
+        {
+            "name": "Ahmed El Sharnoby",
+            "email": "Lan-Hekary@Gmail.com",
+            "url": "https://github.com/Lan-Hekary/"
+        }
+    ],
+    "scripts": {
+        "start": "npm run decrypt && npm run unpack && npm run release:test",
+        "decrypt": "cross-var crypt-aes decrypt -k -s build.zip.caes -p $TACT_CRYPT_AES_PASSWORD",
+        "unpack": "extract-zip build.zip",
+        "build": "npm run decrypt && npm run unpack",
+        "clean": "rm -rf out build build.zip",
+        "release": "electron-builder -p always",
+        "release:test": "electron-builder --dir",
+        "test": "echo \"Passed\" && exit 0"
+    },
+    "build": {
+        "appId": "com.interact-labs.TACT",
+        "productName": "TACT",
+        "remoteBuild": false,
+        "npmRebuild": true,
+        "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+        "files": [
+            "build/**/*",
+            "assets/icon.*",
+            "!node_modules/",
+            {
+                "from": "node_modules/node-hid/build/Release",
+                "to": "build/Release",
+                "filter": [
+                    "**/*.node"
+                ]
+            },
+            {
+                "from": "node_modules/usb-detection/build/Release",
+                "to": "build/Release",
+                "filter": [
+                    "**/*.node"
+                ]
+            },
+            {
+                "from": "node_modules/@serialport/bindings/build/Release",
+                "to": "build/Release",
+                "filter": [
+                    "**/*.node"
+                ]
+            }
+        ],
+        "directories": {
+            "buildResources": "assets",
+            "output": "out"
+        },
+        "publish": [
+            {
+                "provider": "github"
+            }
+        ],
+        "mac": {
+            "target": [
+                "zip",
+                "dmg",
+                "pkg"
+            ],
+            "icon": "assets/icon.icns",
+            "category": "public.app-category.productivity"
+        },
+        "win": {
+            "target": [
+                "portable:x64",
+                "portable:ia32",
+                "nsis:x64",
+                "nsis:ia32",
+                "zip:x64",
+                "zip:ia32"
+            ],
+            "icon": "assets/icon.ico"
+        },
+        "portable": {
+            "artifactName": "${productName}-Portable-${version}-${os}-${arch}.${ext}"
+        },
+        "nsis": {
+            "artifactName": "${productName}-Installer-${version}-${os}-${arch}.${ext}",
+            "oneClick": false,
+            "deleteAppDataOnUninstall": true,
+            "installerIcon": "assets/icon.ico",
+            "installerHeaderIcon": "assets/icon.ico"
+        },
+        "linux": {
+            "target": [
+                "zip",
+                "deb",
+                "AppImage"
+            ],
+            "category": "Productivity",
+            "executableName": "TACT",
+            "synopsis": "Interactive Kit"
+        },
+        "deb": {
+            "packageCategory": "Productivity",
+            "afterInstall": "assets/postInstall.sh",
+            "afterRemove": "assets/postRemove.sh"
+        }
+    },
+    "devDependencies": {
+        "@electron/remote": "^2.0.1",
+        "cross-var": "^1.1.0",
+        "crypt-aes": "^1.1.1",
+        "electron": "13.3.0",
+        "electron-builder": "^22.13.1",
+        "extract-zip": "^2.0.1"
+    },
+    "dependencies": {
+        "@serialport/bindings": "^9.2.4",
+        "ffi-napi": "^4.0.3",
+        "node-hid": "^2.1.1",
+        "usb-detection": "^4.10.0"
+    }
+}

@@ -1,0 +1,70 @@
+name: TACT Building
+
+on:
+  push:
+    tags:
+      - v* # Push events to v* tags
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: Upload output artifacts
+        required: true
+        default: 'yes'
+jobs:
+  Deploy:
+    name: 'Build with NodeJS ${{ matrix.node_version }} for ${{ matrix.os }}'
+    runs-on: '${{ matrix.os }}'
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        node_version: ['14.x']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: false
+      TACT_CRYPT_AES_PASSWORD: ${{ secrets.TACT_CRYPT_AES_PASSWORD }}
+      GH_TOKEN: ${{ secrets.github_token }}
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+      - name: Install libusb
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install libusb-1.0-0-dev
+          sudo apt-get install libudev-dev
+        shell: bash
+      - name: 'Use Node.js ${{ matrix.node_version }}'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ matrix.node_version }}'
+      - name: Install Dependencies
+        run: npm install
+        shell: bash
+      - name: Decrypt and Prepare the Build
+        run: |
+          npm run decrypt
+          npm run unpack
+        shell: bash
+      - name: Build/Release Electron app
+        env: 
+          DEBUG: electron-builder
+        run: npm run release
+        shell: bash
+      - name: List Output
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            ls ./out/
+          else
+            ls -al ./out/
+          fi
+        shell: bash
+      - name: Upload Artifact
+        if: '${{ github.event.inputs.upload }} == ''yes'''
+        uses: actions/upload-artifact@v2
+        with:
+          name: '${{ runner.os }}-build'
+          if-no-files-found: ignore
+          path: |
+            ./out/
+            !./out/*unpacked
+            !./out/mac/
