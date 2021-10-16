@@ -1,0 +1,6 @@
+{
+    "version": "v1.6.1",
+    "win": "https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.6.1/OpenBoard_Installer_1.6.1.exe",
+    "mac": "https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.6.1/OpenBoard-1.6.1.dmg",
+    "linux": "https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.6.1/openboard_ubuntu_20.04_1.6.1_amd64.deb"
+}

@@ -50,8 +50,20 @@
 | [64-bit (exe)]({{winInstaller64}}) | [64-bit (exe)]({{winPortable64}}) | [32-bit (zip)]({{winZip32}}) |
 | [32-bit (exe)]({{winInstaller32}}) | [32-bit (exe)]({{winPortable32}})
 
-| MacOS | Linux |
+| MacOS (10.11+) | Linux (Ubuntu 14+) |
 | :---: | :----: |
 | [64-bit (dmg)]({{macDmg64}}) | [64-bit (deb)]({{linuxDeb64}}) |
 | [64-bit (pkg)]({{macPkg64}}) | [64-bit (AppImage)]({{linuxApp64}}) |
 | [64-bit (zip)]({{macZip64}}) | [64-bit (zip)]({{linuxZip64}}) |
+
+{% assign openboard = site.data.openboard %}
+## Download OpenBoard {{openboard.version}}
+
+| Windows | MacOS (10.13+) | Linux (Ubuntu 18+) |
+| :---: | :----: | :---: |
+| [32-bit and 64-bit (exe)]({{openboard.win}}) | [64-bit (dmg)]({{openboard.mac}}) | [64-bit (deb)]({{openboard.linux}}) 
+
+{% assign openboard = site.data.vc %}
+## Download Microsoft Visual C++ Redistributables
+
+[Download All (RAR)](https://drive.google.com/uc?id=1qivE7vZKDkjW5-nAH4oYiw5TXTeoRbJB&export=download)
