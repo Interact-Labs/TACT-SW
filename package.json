@@ -1,6 +1,6 @@
 {
     "name": "tact",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "A kit if Infrared Detector and Electronic Pen that transform any monitor into an Interactive Surface.",
     "main": "./build/main/mainApp.js",
     "homepage": "https://www.interact-labs.com/",
@@ -126,7 +126,7 @@
         "@electron/remote": "^2.0.1",
         "cross-var": "^1.1.0",
         "crypt-aes": "^1.1.1",
-        "electron": "13.3.0",
+        "electron": "^13.6.1",
         "electron-builder": "^22.13.1",
         "extract-zip": "^2.0.1"
     },
@@ -134,6 +134,6 @@
         "@serialport/bindings": "^9.2.4",
         "ffi-napi": "^4.0.3",
         "node-hid": "^2.1.1",
-        "usb-detection": "^4.10.0"
+        "usb-detection": "^4.13.0"
     }
 }
