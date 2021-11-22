@@ -64,6 +64,6 @@
 | [32-bit and 64-bit (exe)]({{openboard.win}}) | [64-bit (dmg)]({{openboard.mac}}) | [64-bit (deb)]({{openboard.linux}}) 
 
 {% assign openboard = site.data.vc %}
-## Download Microsoft Visual C++ Redistributables
+## [Download Microsoft Visual C++ Redistributables (RAR)](https://drive.google.com/uc?id=1qivE7vZKDkjW5-nAH4oYiw5TXTeoRbJB&export=download)
 
-[Download All (RAR)](https://drive.google.com/uc?id=1qivE7vZKDkjW5-nAH4oYiw5TXTeoRbJB&export=download)
+#### [All TACT Releases]({{site.github.releases_url}})
