@@ -128,12 +128,12 @@
         "@electron/remote": "^2.0.1",
         "cross-var": "^1.1.0",
         "crypt-aes": "^1.1.1",
-        "electron": "^13.6.1",
-        "electron-builder": "^22.13.1",
+        "electron": "^15.3.5",
+        "electron-builder": "^22.14.13",
         "extract-zip": "^2.0.1"
     },
     "dependencies": {
-        "@serialport/bindings": "^9.2.4",
+        "@serialport/bindings": "^9.2.8",
         "node-hid": "^2.1.1",
         "usb-detection": "^4.13.0"
     }
