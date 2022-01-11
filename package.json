@@ -134,7 +134,6 @@
     },
     "dependencies": {
         "@serialport/bindings": "^9.2.4",
-        "ffi-napi": "^4.0.3",
         "node-hid": "^2.1.1",
         "usb-detection": "^4.13.0"
     }
