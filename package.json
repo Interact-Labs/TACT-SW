@@ -1,6 +1,6 @@
 {
     "name": "tact",
-    "version": "3.1.1",
+    "version": "3.2.0",
     "description": "A kit if Infrared Detector and Electronic Pen that transform any monitor into an Interactive Surface.",
     "main": "./build/main/mainApp.js",
     "homepage": "https://www.interact-labs.com/",
@@ -32,7 +32,7 @@
         "build": "npm run decrypt && npm run unpack",
         "clean": "rm -rf out build build.zip",
         "release": "electron-builder -p always",
-        "release:test": "electron-builder --dir",
+        "release:test": "electron-builder --dir && electron-builder --dir --ia32",
         "test": "echo \"Passed\" && exit 0"
     },
     "build": {
@@ -40,6 +40,7 @@
         "productName": "TACT",
         "remoteBuild": false,
         "npmRebuild": true,
+        "buildDependenciesFromSource": true,
         "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
         "files": [
             "build/**/*",
