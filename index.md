@@ -63,7 +63,8 @@
 | :---: | :----: | :---: |
 | [32-bit and 64-bit (exe)]({{openboard.win}}) | [64-bit (dmg)]({{openboard.mac}}) | [64-bit (deb)]({{openboard.linux}}) 
 
-{% assign openboard = site.data.vc %}
+## [Download Open Sankoré v2.5.1 (ZIP)](https://drive.google.com/u/0/uc?id=1GLmUMq2n9anTj7CegkVUd26uJPmg4702&export=download)
+
 ## [Download Microsoft Visual C++ Redistributables (RAR)](https://drive.google.com/uc?id=1qivE7vZKDkjW5-nAH4oYiw5TXTeoRbJB&export=download)
 
 #### [All TACT Releases]({{site.github.releases_url}})
