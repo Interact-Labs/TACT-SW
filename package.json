@@ -82,7 +82,8 @@
                 "nsis:ia32",
                 "zip:x64",
                 "zip:ia32",
-                "appx"
+                "appx:x64",
+                "appx:ia32"
             ],
             "icon": "assets/icon.ico"
         },
