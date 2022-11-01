@@ -7,13 +7,13 @@
 {% if asset.name contains '.blockmap' %}
 {% continue %}
 {% endif %}
-{% if asset.name contains winTag and asset.name contains 'Installer' %}
+{% if asset.name contains winTag and asset.name contains 'Installer' and asset.name contains '.exe' %}
 {% if asset.name contains '64' %} {% assign winInstaller64 = asset.browser_download_url %}
 {% elsif asset.name contains '32' %} {% assign winInstaller32 = asset.browser_download_url %} 
 {% else %}{% assign winInstallerAll = asset.browser_download_url %} {% endif %}
 {% continue %}
 {% endif %}
-{% if asset.name contains winTag and asset.name contains 'Portable' %}
+{% if asset.name contains winTag and asset.name contains 'Portable' and asset.name contains '.exe' %}
 {% if asset.name contains '64' %} {% assign winPortable64 = asset.browser_download_url %}
 {% elsif asset.name contains '32' %} {% assign winPortable32 = asset.browser_download_url %} 
 {% else %}{% assign winPortableAll = asset.browser_download_url %} {% endif %}
