@@ -9,7 +9,7 @@ on:
       upload:
         description: Upload output artifacts
         required: true
-        default: 'yes'
+        default: 'no'
 jobs:
   Deploy:
     name: 'Build with NodeJS ${{ matrix.node_version }} for ${{ matrix.os }}'
@@ -28,7 +28,7 @@ jobs:
       GH_TOKEN: ${{ secrets.github_token }}
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       # - name: Install libusb
       #   if: runner.os == 'Linux'
       #   run: |
@@ -41,7 +41,7 @@ jobs:
         run: export CSC_IDENTITY_AUTO_DISCOVERY=false
         shell: bash
       - name: 'Use Node.js ${{ matrix.node_version }}'
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '${{ matrix.node_version }}'
       - name: Install Dependencies
@@ -67,7 +67,7 @@ jobs:
         shell: bash
       - name: Upload Artifact
         if: '${{ github.event.inputs.upload }} == ''yes'''
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: '${{ runner.os }}-build'
           if-no-files-found: ignore
