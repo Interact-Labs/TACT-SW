@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="179.0014"
+   height="179.00134"
+   viewBox="0 0 179.00141 179.00134"
+   sodipodi:docname="Tact-brand-guide-extract.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="favicon"
+     transform="matrix(1.3333333,0,0,-1.3333333,-856.19085,753.00792)"
+     inkscape:export-filename="g8.svg"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <g
+       id="g174"
+       transform="translate(681.24418,564.75595)"
+       style="image-rendering:auto">
+      <path
+         d="m 0,0 h 56.05 c 21.594,0 39.1,-17.506 39.1,-39.101 V -95.15 c 0,-21.595 -17.506,-39.101 -39.1,-39.101 H 0 c -21.595,0 -39.101,17.506 -39.101,39.101 v 56.049 C -39.101,-17.506 -21.595,0 0,0"
+         style="fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path176"
+         inkscape:export-filename="tact192.png"
+         inkscape:export-xdpi="102.97126"
+         inkscape:export-ydpi="102.97126" />
+    </g>
+    <path
+       d="m 1325.745,616.377 h -14.985 v 15.1 h 14.985 z"
+       style="fill:#70cace;fill-opacity:1;fill-rule:nonzero;stroke:none;image-rendering:auto"
+       id="path178"
+       transform="translate(-586.99972,-97.871252)" />
+    <g
+       id="g180"
+       transform="translate(759.58277,461.65595)"
+       style="image-rendering:auto">
+      <path
+         d="M 0,0 V 14.998 H -20.745 V 50.95 H -35.73 V 14.998 H -55.804 V 0 Z"
+         style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path182" />
+    </g>
+    <path
+       d="m 1245.955,631.477 h 14.885 v -14.998 h -14.885 z"
+       style="fill:#f14a5b;fill-opacity:1;fill-rule:nonzero;stroke:none;image-rendering:auto"
+       id="path184"
+       transform="translate(-586.99972,-97.871252)" />
+    <g
+       id="g186"
+       transform="translate(681.00708,533.60525)"
+       style="image-rendering:auto">
+      <path
+         d="M 0,0 V -14.998 H 0.005 V -71.949 H 14.99 v 56.951 H 35.721 V 0 Z"
+         style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path188" />
+    </g>
+  </g>
+</svg>
