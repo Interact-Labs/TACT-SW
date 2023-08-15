@@ -48,7 +48,7 @@
 | :---: | :----: | :---: | :---: |
 | [All in One (exe)]({{winInstallerAll}}) | [All in One (exe)]({{winPortableAll}}) | [64-bit (zip)]({{winZip64}}) 
 | [64-bit (exe)]({{winInstaller64}}) | [64-bit (exe)]({{winPortable64}}) | [32-bit (zip)]({{winZip32}}) |
-| [32-bit (exe)]({{winInstaller32}}) | [32-bit (exe)]({{winPortable32}})
+| [32-bit (exe)]({{winInstaller32}}) | [32-bit (exe)]({{winPortable32}}) |
 
 | MacOS (10.11+) | Linux (Ubuntu 14+) |
 | :---: | :----: |
@@ -59,12 +59,12 @@
 {% assign openboard = site.data.openboard %}
 ## Download OpenBoard {{openboard.version}}
 
-| Windows | MacOS (10.13+) | Linux (Ubuntu 18+) |
+| Windows | MacOS (10.13+) | Linux (Ubuntu 20.04) | Linux (Ubuntu 22.04) |
 | :---: | :----: | :---: |
-| [32-bit and 64-bit (exe)]({{openboard.win}}) | [64-bit (dmg)]({{openboard.mac}}) | [64-bit (deb)]({{openboard.linux}}) 
+| [32-bit and 64-bit (exe)]({{openboard.win}}) | [64-bit (dmg)]({{openboard.mac}}) | [64-bit (deb)]({{openboard.linux_20_04}}) | [64-bit (deb)]({{openboard.linux_22_04}}) |
 
-## [Download Open Sankoré v2.5.1 (ZIP)](https://drive.google.com/u/0/uc?id=1GLmUMq2n9anTj7CegkVUd26uJPmg4702&export=download)
+## [Download Open Sankoré v2.5.1 (ZIP)](https://workdrive.zoho.com/file/lvdp9c59528f78bf249128e5f713b84f0c2d1)
 
-## [Download Microsoft Visual C++ Redistributables (RAR)](https://drive.google.com/uc?id=1qivE7vZKDkjW5-nAH4oYiw5TXTeoRbJB&export=download)
+## [Download Microsoft Visual C++ Redistributables (RAR)](https://workdrive.zohoexternal.com/file/lvdp9a7c7ea47275f4f9f88e4b5dad1692276)
 
 #### [All TACT Releases]({{site.github.releases_url}})
