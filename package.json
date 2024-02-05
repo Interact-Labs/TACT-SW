@@ -1,6 +1,6 @@
 {
     "name": "TACT",
-    "version": "4.0.2",
+    "version": "4.1.0",
     "description": "A kit if Infrared Detector and Electronic Pen that transform any monitor into an Interactive Surface.",
     "main": "./build/electron/main.cjs",
     "homepage": "https://www.interact-labs.com/",
